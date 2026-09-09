@@ -1,0 +1,248 @@
+:root{
+    --background-color: #080b10;
+    --background-color-blocks: #111820;
+    --background-color-container: #273142;
+    --text: #e6edf3;
+    --button-normal: #00c8e8;
+    --button-hover: #00e5ff;
+    --button-active: #8b5cf6;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    background-color: var(--background-color);
+    color: var(--text);
+}
+
+.app{
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    min-height: 100vh;
+    row-gap: 10px;
+}
+
+nav, main{
+    background-color: var(--background-color-blocks);
+    padding: 15px;
+    border-radius: 15px;
+}
+.maincnt{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+.navleft, .navright{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+.navcntlink, .addbtn{
+    background-color: var(--button-normal);
+    border-radius: 10px;
+    padding: 8px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.navcntlink:hover{
+    background-color: var(--button-hover);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+.navcntlink:active{
+    background-color: var(--button-active);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+.contentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+
+}
+.LoginSignupForm{
+    background-color: var(--background-color-container);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 6px 10px var(--background-color-container);
+    text-align: center;
+    width: max-content;
+    justify-content: center;
+}
+.LoginSignupForm input{
+    padding: 6px;
+    margin: 5px;
+    border: transparent;
+    border-radius: 10px;
+    text-align: center;
+}
+.LoginSignupForm button{
+    padding: 8px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: var(--button-normal);
+    color: var(--text);
+}
+.LoginSignupForm button:active{
+    padding: 8px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: var(--button-active);
+}
+.LoginSignupForm button:hover{
+    padding: 8px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+.userAddDataBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*DEV vault logo edit*/
+
+.devvaultlogoD{
+    color: #6c07e0;
+    font-weight: 700;
+}
+.devvaultlogoE{
+    color: #5300ee;
+    font-weight: 700;
+}
+.devvaultlogoV{
+    color: #b700ff;
+    font-weight: 700;
+}
+.Addpagestyling{
+    background-color: var(--background-color-container);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 4px 6px 10px var(--background-color-container);
+    justify-content: center;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s all;
+}
+.Addpagestyling input{
+    padding: 6px;
+    border-radius: 10px;
+    text-align: center;
+    border:transparent;
+    margin: 6px;
+
+}
+.Addpagestyling select{
+    padding: 6px;
+    border: transparent;
+    border-radius: 10px;
+    margin: 6px;
+    transition: 0.3s all;
+}
+.Addpagestyling select:hover{
+    padding: 6px;
+    border: transparent;
+    border-radius: 10px;
+    margin: 6px;
+}
+.Addpagestyling button{
+    padding: 6px;
+    border: transparent;
+    border-radius: 10px;
+    margin: 6px;
+    background-color: var(--button-normal);
+    color: var(--text);
+}
+.Addpagestyling button:hover{
+    background-color: var(--button-hover);
+    color: var(--text);
+    cursor: pointer;
+}
+.Addpagestyling button:active{
+    background-color: var(--button-active);
+    color: var(--text);
+}
+.addprojectPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+#projectDataContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+.projectContainer{
+    border: transparent;
+    background-color: var(--background-color-container);
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px var(--background-color-container);
+    transition: 0.2s all ease-out;
+}
+.projectContainer:hover{
+    transform: scale(1.1);
+}
+.projectNavigations{
+    border: none;
+    border-radius: 8px;
+    padding: 6px;
+    width: 55px;
+    background-color: var(--button-normal);
+    color: var(--text);
+    transition: 0.3s all;
+}
+.projectNavigations:hover{
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+.projectNavigations:active{
+    background-color: var(--button-active);
+}
+.projectsinContainer{
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    height: 80px;
+    word-wrap: break-word;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+    white-space: normal; 
+    overflow-wrap: anywhere; 
+    max-width: 100%;
+}
+.EditPagecontentBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.homepageCnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.homepageCnt h3{
+    justify-content: left;
+}
