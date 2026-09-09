@@ -6,8 +6,6 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-os.getenv("SECRET_KEY")
-
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///devvault.db"
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
