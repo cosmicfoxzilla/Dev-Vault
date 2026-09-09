@@ -2,10 +2,15 @@ from flask import Flask, jsonify, request, render_template, session, redirect, u
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import timedelta
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+os.getenv("SECRET_KEY")
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///devvault.db"
-app.config["SECRET_KEY"] = "#fyu^&763hKOHYTU(*754hie97-uei78TGCBW7&*&(7UCEIFW7T4ue7whgf))"
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.permanent_session_lifetime = timedelta(days=30)
 db = SQLAlchemy(app)
 
