@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contentBox">
+    <div class="LoginSignupForm" method="post">
+        <input id="username" type="text" placeholder="Enter username: " required><br>
+        <input id="password" type="password" placeholder="Enter password: " required><br>
+        <button type="button" onclick="RegisterUserBtn()">Register</button>
+        <p id="error"></p>
+    </div>
+</div>
+{% endblock %}

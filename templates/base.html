@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Vault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app">
+        <nav>
+            <div class="maincnt">
+                <div class="navleft">
+                    <p><span class="devvaultlogoD">D</span><span class="devvaultlogoE">E</span><span class="devvaultlogoV">V</span> Vault</p>
+                    {% if "user_id" in session %}
+                        <a class="navcntlink" href="{{ url_for('dashboard_page') }}">Dashboard</a>
+                    {% endif %}
+                </div>
+                <div class="navright">
+                    {% if "user_id" in session %}
+                        <a class="navcntlink" href="{{ url_for('logout') }}">Logout</a>
+                    {% else %}
+                        <a class="navcntlink" href="{{ url_for('loginPage') }}">Login</a>
+                        <a class="navcntlink" href="{{ url_for('RegisterPage') }}">Register</a>
+                    {% endif %}
+                </div>
+                
+            </div>
+        </nav>
+        <main>
+        {% block content %}
+        {% endblock %}
+        </main>
+    </div>
+</body>
+    <script defer src="{{ url_for('static', filename='main.js') }}"></script>
+</html>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="EditPagecontentBody">
+    <form class="Addpagestyling"> 
+        <input id="contentNameToEdit" type="text" value="{{ projectData.name}}" required>
+        <label id="projectLvlToEdit" for="difficulty">Choose Project Difficulty:</label>
+        <select name="levels" id="difficulty" required>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button type="button" id="editsSaveBtn" project-id="{{ projectData.id }}" onclick="editProject()">Save</button>
+        <p id="ErrorLogEditPage"></p>
+    </form>
+</div>
+{% endblock %}

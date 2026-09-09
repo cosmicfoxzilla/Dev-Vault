@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="userAddDataBlock">
+    <a class="addbtn" href="{{ url_for('add') }}">Add projects</a>
+    <p id="profileUsernameCnt"></p>
+</div><br>
+<div id="projectDataContainer"></div>
+{% endblock %}
+<script defer src="{{ url_for('static', filename='main.js') }}"></script>

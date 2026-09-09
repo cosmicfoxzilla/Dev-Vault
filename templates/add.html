@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="addprojectPage">
+    <form class="Addpagestyling" method="post">
+        <input type="text" id="text" placeholder="Enter project name" required><br>
+        <label id="projectLvl" for="difficulty">Choose Project Difficulty:</label>
+        <select name="levels" id="difficulty" required>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select><br>
+        <button onclick="AddProject()" type="button">Add</button>
+        <p id="AddProjectPageErrorHandler"></p>
+    </form>
+</div>
+{% endblock %}
+
