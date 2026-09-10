@@ -28,9 +28,12 @@ class DevData(db.Model):
 #routes
 @app.route("/api/home")
 @app.route("/")
+@app.route("/index")
+@app.route("/home")
 def home():
+    if "user_id" in session:
+        return redirect(url_for("dashboard_page"))
     return render_template("index.html")
-
 #===========================USER REGISTER===========================
 @app.route("/api/register", methods=["POST"])
 def register():
